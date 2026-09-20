@@ -67,6 +67,15 @@ curl -i http://localhost:4000/
 curl -i http://localhost:4000/missing
 ```
 
+Query the weather for a supported city:
+
+```sh
+curl -i "http://localhost:4000/weather?city=Toronto"
+```
+
+Supported cities are Toronto, Calgary, and Montreal. Other cities return
+`400 Bad Request`.
+
 ## Server Lifecycle
 
 `--no-halt` is not a workaround. It is the idiomatic way to run a long-lived
